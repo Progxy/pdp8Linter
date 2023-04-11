@@ -1,0 +1,172 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PDP8 Assembly",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#values"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.org.pdp8",
+					"match": "ORG"
+				}, 
+				{
+					"name": "keyword.end.pdp8",
+					"match": "END"
+				},				
+				{
+					"name": "keyword.dec.pdp8",
+					"match": "DEC"
+				},				
+				{
+					"name": "keyword.hex.pdp8",
+					"match": "HEX"
+				},				
+				{
+					"name": "keyword.and.pdp8",
+					"match": "AND"
+				},				
+				{
+					"name": "keyword.add.pdp8",
+					"match": "ADD"
+				},				
+				{
+					"name": "keyword.lda.pdp8",
+					"match": "LDA"
+				},				
+				{
+					"name": "keyword.sta.pdp8",
+					"match": "STA"
+				},				
+				{
+					"name": "keyword.bun.pdp8",
+					"match": "BUN"
+				},				
+				{
+					"name": "keyword.bsa.pdp8",
+					"match": "BSA"
+				},				
+				{
+					"name": "keyword.isz.pdp8",
+					"match": "ISZ"
+				},				
+				{
+					"name": "keyword.cla.pdp8",
+					"match": "CLA"
+				},				
+				{
+					"name": "keyword.cle.pdp8",
+					"match": "CLE"
+				},				
+				{
+					"name": "keyword.cma.pdp8",
+					"match": "CMA"
+				},				
+				{
+					"name": "keyword.cme.pdp8",
+					"match": "CME"
+				},				
+				{
+					"name": "keyword.cir.pdp8",
+					"match": "CIR"
+				},				
+				{
+					"name": "keyword.cil.pdp8",
+					"match": "CIL"
+				},				
+				{
+					"name": "keyword.inc.pdp8",
+					"match": "INC"
+				},				
+				{
+					"name": "keyword.spa.pdp8",
+					"match": "SPA"
+				},				
+				{
+					"name": "keyword.sna.pdp8",
+					"match": "SNA"
+				},				
+				{
+					"name": "keyword.sza.pdp8",
+					"match": "SZA"
+				},				
+				{
+					"name": "keyword.sze.pdp8",
+					"match": "SZE"
+				},				
+				{
+					"name": "keyword.hlt.pdp8",
+					"match": "HLT"
+				},				
+				{
+					"name": "keyword.inp.pdp8",
+					"match": "INP"
+				},				
+				{
+					"name": "keyword.out.pdp8",
+					"match": "OUT"
+				},				
+				{
+					"name": "keyword.ski.pdp8",
+					"match": "SKI"
+				},				
+				{
+					"name": "keyword.sko.pdp8",
+					"match": "SKO"
+				},				
+				{
+					"name": "keyword.ion.pdp8",
+					"match": "ION"
+				},				
+				{
+					"name": "keyword.iof.pdp8",
+					"match": "IOF"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [{
+				"name": "constant.numeric.pdp8",
+				"match": "[[:alnum:]"
+			}]
+		},
+		"values": {
+			"patterns": [
+				{
+					"name": "constant.numeric.pdp8",
+					"match": "\\d+$"
+				}, 
+				{
+					"name": "constant.character.sign.pd8",
+					"match": "-"
+				},
+				{
+					"name": "string.unquoted.pdp8",
+					"match": "[[:alnum:],]+"
+				}, 
+				{
+					"name": "comment.line",
+					"begin": "/",
+					"end": "\n"
+				}, 
+				{
+					"name": "comment.line",
+					"begin": ";",
+					"end": "\n"
+				}, 
+				{
+					"name": "comment.line",
+					"begin": "#",
+					"end": "\n"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pdp8"
+}

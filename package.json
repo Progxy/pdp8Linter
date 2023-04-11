@@ -1,0 +1,26 @@
+{
+  "name": "pdp8linter",
+  "displayName": "Pdp8Linter",
+  "description": "A simple linter for the pdp8 assembly language.",
+  "publisher": "TheProgxy",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pdp8",
+      "aliases": ["PDP8 Assembly", "pdp8"],
+      "extensions": [".s",".asm",".S",".pdp8"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pdp8",
+      "scopeName": "source.pdp8",
+      "path": "./syntaxes/pdp8.tmLanguage.json"
+    }]
+  }
+}
